@@ -28,7 +28,7 @@ h1 { font-size: 22px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 4
 .drop svg { margin-bottom: 10px; }
 .drop .name { font-size: 14px; font-weight: 500; }
 .drop input { display: none; }
-.hidden { display: none; }
+.hidden { display: none !important; }
 .status { font-size: 13px; color: #e5593f; margin-bottom: 16px; min-height: 18px; }
 
 /* File list */
@@ -265,6 +265,7 @@ function updateMode() {
   $('btnLossless').classList.toggle('active', mode === 'lossless');
   $('qualityRow').classList.toggle('hidden', mode === 'lossless');
 }
+updateMode();
 
 // --- Drag & drop ---
 const dropZone = $('dropZone');
